@@ -133,11 +133,11 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, onFileSele
         <div className="relative w-full lg:w-1/2 flex items-center justify-center lg:justify-center z-10 animate-float mb-6 lg:mb-0">
           
           {/* Inner Neural Network Glow */}
-          <div className="absolute w-[250px] h-[350px] md:w-[400px] md:h-[500px] bg-fuchsia-600/40 blur-[70px] rounded-full animate-pulse-glow pointer-events-none"></div>
+          <div className="absolute w-[250px] h-[350px] md:w-[380px] md:h-[480px] bg-fuchsia-600/40 blur-[70px] rounded-full animate-pulse-glow pointer-events-none"></div>
           
           {/* THE PORTRAIT (CLIPPED) */}
           <div 
-            className="relative w-[280px] h-[360px] md:w-[380px] md:h-[480px] bg-slate-800 bg-cover bg-center bg-no-repeat drop-shadow-[0_0_40px_rgba(192,38,211,0.4)] transition-all duration-1000 ease-out z-10"
+            className="relative w-[250px] h-[320px] md:w-[350px] md:h-[450px] bg-slate-800 bg-cover bg-center bg-no-repeat drop-shadow-[0_0_40px_rgba(192,38,211,0.4)] transition-all duration-1000 ease-out z-10"
             style={{
               backgroundImage: "url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop')",
               clipPath: "polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)"
@@ -159,7 +159,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, onFileSele
           </div>
 
           {/* THE UI OVERLAY (UNCLIPPED) */}
-          <div className="absolute w-[280px] h-[360px] md:w-[380px] md:h-[480px] pointer-events-none z-50">
+          <div className="absolute w-[250px] h-[320px] md:w-[350px] md:h-[450px] pointer-events-none z-50">
              {analysisPoints.map((point, index) => (
                 <div 
                   key={index} 
@@ -206,12 +206,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, onFileSele
                        transitionDelay: showAnalysis ? `${point.delay + 800}ms` : `${point.exitDelay}ms`
                     }}
                     >
-                      <span className="text-[10px] font-mono text-fuchsia-700 dark:text-fuchsia-300 font-bold tracking-wider mb-0.5 block whitespace-nowrap">
+                      <span className="text-[9px] font-mono text-fuchsia-700 dark:text-fuchsia-300 font-bold tracking-wider mb-0.5 block whitespace-nowrap">
                          {point.label}
                       </span>
                       {/* SubLabel */}
                       <span className={`
-                            text-[9px] font-mono text-slate-800 dark:text-white/80 overflow-hidden whitespace-nowrap block border-r-2 border-transparent w-0
+                            text-[8px] font-mono text-slate-800 dark:text-white/80 overflow-hidden whitespace-nowrap block border-r-2 border-transparent w-0
                             ${showAnalysis ? 'animate-[typewriter_1s_steps(30)_forwards]' : 'opacity-0'}
                           `}
                             style={{ 
@@ -235,12 +235,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, onFileSele
           </p>
 
            {/* Hero Headline */}
-           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-5">
+           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-5">
              Truth in a <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-primary-glow">Synthetic World</span>
            </h2>
 
           {/* Description */}
-          <p className="text-slate-600 dark:text-white/70 text-lg leading-relaxed mb-8 font-light max-w-lg">
+          <p className="text-slate-600 dark:text-white/70 text-base leading-relaxed mb-8 font-light max-w-lg">
             Decrypting the fabric of reality. NeuralVerify is an enterprise-grade forensic engine designed to expose the invisible mathematical fingerprints left by modern AI generation—restoring trust in a synthetic world.
           </p>
           
@@ -260,12 +260,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, onFileSele
             accept="video/*"
           />
           
-          <div className="flex flex-col sm:flex-row items-center gap-8 mt-2">
+          <div className="flex flex-col sm:flex-row items-center gap-5 mt-2">
             
             {/* IMAGE BUTTON */}
             <button 
               onClick={handleImageUploadClick}
-              className="group relative px-8 py-4 min-w-[180px] bg-fuchsia-900/20 hover:bg-fuchsia-800/30 border border-fuchsia-500/30 text-white font-mono uppercase tracking-widest text-xs font-bold transition-all duration-300 hover:shadow-[0_0_30px_rgba(192,38,211,0.3)] active:scale-95"
+              className="group relative px-6 py-3 min-w-[160px] bg-fuchsia-900/20 hover:bg-fuchsia-800/30 border border-fuchsia-500/30 text-white font-mono uppercase tracking-widest text-[10px] font-bold transition-all duration-300 hover:shadow-[0_0_30px_rgba(192,38,211,0.3)] active:scale-95"
               style={{ clipPath: "polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px)" }}
             >
                {/* Internal Glow Blob */}
@@ -278,7 +278,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, onFileSele
                <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-fuchsia-500 opacity-60"></div>
                
                <div className="relative flex items-center justify-center gap-2">
-                 <span className="material-symbols-outlined text-fuchsia-300 group-hover:text-white transition-colors text-lg">add_a_photo</span>
+                 <span className="material-symbols-outlined text-fuchsia-300 group-hover:text-white transition-colors text-base">add_a_photo</span>
                  <span className="text-fuchsia-100 group-hover:text-white transition-colors">Analyze Image</span>
                </div>
             </button>
@@ -286,7 +286,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, onFileSele
             {/* VIDEO BUTTON */}
             <button 
               onClick={handleVideoUploadClick}
-              className="group relative px-8 py-4 min-w-[180px] bg-cyan-900/20 hover:bg-cyan-800/30 border border-cyan-500/30 text-white font-mono uppercase tracking-widest text-xs font-bold transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] active:scale-95"
+              className="group relative px-6 py-3 min-w-[160px] bg-cyan-900/20 hover:bg-cyan-800/30 border border-cyan-500/30 text-white font-mono uppercase tracking-widest text-[10px] font-bold transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] active:scale-95"
               style={{ clipPath: "polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px)" }}
             >
                {/* Internal Glow Blob */}
@@ -299,7 +299,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, onFileSele
                <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-cyan-500 opacity-60"></div>
 
                <div className="relative flex items-center justify-center gap-2">
-                 <span className="material-symbols-outlined text-cyan-300 group-hover:text-white transition-colors text-lg">video_camera_front</span>
+                 <span className="material-symbols-outlined text-cyan-300 group-hover:text-white transition-colors text-base">video_camera_front</span>
                  <span className="text-cyan-100 group-hover:text-white transition-colors">Analyze Video</span>
                </div>
             </button>
