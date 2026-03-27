@@ -27,8 +27,12 @@
 <br/>
 
 <!-- 📸 PLACEHOLDER: Put a screenshot of your beautiful UI here -->
-![ImageSense Dashboard Preview](https://via.placeholder.com/1200x600?text=Insert+Screenshot+of+Your+Cinematic+Dashboard+Here)
+<img width="1258" height="592" alt="Screenshot 2026-03-27 094752" src="https://github.com/user-attachments/assets/bc6d4e2e-31f9-4572-9977-870a6dbedc2f" />
 
+<img width="1194" height="589" alt="Screenshot 2026-03-27 095314" src="https://github.com/user-attachments/assets/b736d87b-748f-4b86-85ef-bececdc3dce1" />
+
+
+<img width="1152" height="593" alt="image" src="https://github.com/user-attachments/assets/6553b403-5734-435e-9267-9ffa82334bfd" />
 ---
 
 ## 📖 Executive Summary
